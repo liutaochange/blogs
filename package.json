@@ -1,0 +1,18 @@
+{
+  "name": "blogs",
+  "description": "A Vue.js project",
+  "version": "1.0.0",
+  "author": "liutaochange@163.com",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vuepress": "^0.8.4"
+  },
+  "devDependencies": {
+    "alienupload": "^0.3.3"
+  }
+}
