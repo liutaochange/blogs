@@ -1,17 +1,9 @@
 module.exports = {
   dest: 'vuepress',
-  locales: {
-    '/': {
-      lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
-    },
-    '/zh/': {
-      lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器'
-    }
-  },
+  port: 5566,
+  base: '/',
+  title: 'vuepress',
+  description: 'Vue 驱动的静态网站生成器',
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -25,56 +17,29 @@ module.exports = {
   ],
   serviceWorker: true,
   themeConfig: {
-    repo: 'vuejs/vuepress',
+    repo: 'liutaochange/blogs',
     editLinks: true,
     docsDir: 'docs',
-    locales: {
-      '/': {
-        label: 'English',
-        selectText: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
-        nav: [
-          {
-            text: 'Guide',
-            link: '/guide/',
-          },
-          {
-            text: 'Config Reference',
-            link: '/config/'
-          },
-          {
-            text: 'Default Theme Config',
-            link: '/default-theme-config/'
-          }
-        ],
-        sidebar: {
-          '/guide/': genSidebarConfig('Guide')
-        }
+    nav: [
+      {
+        text: 'Home',
+        link: '/',
       },
-      '/zh/': {
-        label: '简体中文',
-        selectText: '选择语言',
-        editLinkText: '在 GitHub 上编辑此页',
-        lastUpdated: '上次更新',
-        nav: [
-          {
-            text: '指南',
-            link: '/zh/guide/',
-          },
-          {
-            text: '配置',
-            link: '/zh/config/'
-          },
-          {
-            text: '默认主题',
-            link: '/zh/default-theme-config/'
-          }
-        ],
-        sidebar: {
-          '/zh/guide/': genSidebarConfig('指南')
-        }
+      {
+          text: '指南',
+          link: '/guide/',
+      },
+      {
+          text: '配置',
+          link: '/config/'
+      },
+      {
+          text: '默认主题',
+          link: '/default-theme-config/'
       }
+    ],
+    sidebar: {
+      '/guide/': genSidebarConfig('指南')
     }
   }
 }
