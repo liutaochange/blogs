@@ -2,8 +2,8 @@ module.exports = {
   dest: 'vuepress',
   port: 5566,
   base: '/',
-  title: 'vuepress',
-  description: 'Vue 驱动的静态网站生成器',
+  title: 'Liutao',
+  description: 'stay hungry stay foolish',
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -26,40 +26,37 @@ module.exports = {
         link: '/',
       },
       {
-          text: '指南',
-          link: '/guide/',
+          text: 'blogs',
+          items: [
+              { text: 'javascript', link: '/blogs/javascript/'},
+              { text: 'css', link: '/blogs/css/'},
+              { text: 'html', link: '/blogs/html/'},
+              { text: 'canvas', link: '/blogs/canvas/'},
+              { text: 'nodejs', link: '/blogs/nodejs/'}
+          ]
       },
       {
-          text: '配置',
-          link: '/config/'
+          text: 'project',
+          link: '/project/'
       },
       {
-          text: '默认主题',
-          link: '/default-theme-config/'
+          text: 'about me',
+          link: '/about/'
       }
     ],
     sidebar: {
-      '/guide/': genSidebarConfig('指南')
+        '/blogs/javascript/': [
+            '',
+            'array'
+        ],
+        '/blogs/css/': [
+            '',
+            '垂直居中'
+        ],
+        '/blogs/nodejs/': [
+            '',
+            'koa'
+        ]
     }
   }
-}
-
-function genSidebarConfig (title) {
-  return [
-    {
-      title,
-      collapsable: false,
-      children: [
-        '',
-        'getting-started',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'custom-themes',
-        'i18n',
-        'deploy'
-      ]
-    }
-  ]
 }

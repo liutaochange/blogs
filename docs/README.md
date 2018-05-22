@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /hero.png
-actionText: 开始学习 →
-actionLink: /guide/
+heroImage: /blogs.jpg
+actionText: blogs →
+actionLink: /blogs/
 ---
